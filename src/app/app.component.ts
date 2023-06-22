@@ -6,7 +6,45 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
-  displayEmployeForm = false;
-  displayEmployeCard = false;
-  btn = true;
+
+
+  arr : any[] = [];
+
+
+  formDisplay = false;
+  backbtn = false;
+  showEmployee = false;
+
+  hideboth() {
+    this.formDisplay =false
+    this.showEmployee = false
+    this.backbtn =true;
+  }
+
+  showHome() {
+    this.formDisplay = false;
+    this.showEmployee = false;
+    this.backbtn =false;
+  }
+
+  addEmployee() {
+    this.formDisplay = true;
+    this.backbtn =true;
+    this.showEmployee = false;
+  }
+ 
+  showEmplyee() {
+    this.showEmployee = true;
+    this.formDisplay = false;
+    this.backbtn =true;
+    }
+
+    submitData(name:string, designation:string, image:string) {
+
+      this.arr.push({name, designation, image})
+      //console.log(name, designation, image)
+      return false
+
+    }
+
 }
