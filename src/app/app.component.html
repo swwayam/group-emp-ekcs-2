@@ -12,7 +12,7 @@
 </div>
 
 <!-- this displays your form to add new Employee -->
-<app-form *ngIf="formDisplay"></app-form>
+<app-form (btnClick)="addToDb($event)" *ngIf="formDisplay"></app-form>
 
 <app-rmp *ngIf="showEmployee"></app-rmp>
 

@@ -39,6 +39,8 @@ export class AppComponent {
     this.backbtn =true;
     }
 
-  
+    addToDb(obj : any){
+      console.log(obj)
+    }
 
 }

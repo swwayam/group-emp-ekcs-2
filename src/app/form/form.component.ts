@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, Output, EventEmitter } from '@angular/core';
 
 @Component({
   selector: 'app-form',
@@ -6,10 +6,10 @@ import { Component } from '@angular/core';
   styleUrls: ['./form.component.css']
 })
 export class FormComponent {
-  arr : any[] =[] 
+  @Output() btnClick = new EventEmitter();
   submitData(name:string, designation:string, image:string) {
 
-    this.arr.push({name, designation, image})
+    this.btnClick.emit({name, designation, image})
     //console.log(name, designation, image)
     return false
 
