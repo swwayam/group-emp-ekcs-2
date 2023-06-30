@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, Input } from '@angular/core';
 
 @Component({
   selector: 'app-rmp',
@@ -6,5 +6,5 @@ import { Component } from '@angular/core';
   styleUrls: ['./rmp.component.css']
 })
 export class RmpComponent {
-
+  @Input() db !: any[]  
 }

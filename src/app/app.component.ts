@@ -40,7 +40,7 @@ export class AppComponent {
     }
 
     addToDb(obj : any){
-      console.log(obj)
+      this.arr.push(obj)
     }
 
 }

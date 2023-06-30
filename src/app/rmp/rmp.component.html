@@ -1,15 +1,15 @@
-<div class="container" >
-    <div class="row">
+
+ <div class="row" *ngFor="let emp of db">
       <div class="col" >
         <div class="card" style="width: 18rem;">
-          <img src="add" class="card-img-top" >
+          <img [src]="emp.image" class="card-img-top" >
           <div class="card-body">
-            <h5 class="card-title" ngNonBindable>{{emp.name}}</h5>
-            <p class="card-text" ngNonBindable>{{emp.designation}}</p>
+            <h5 class="card-title" >{{emp.name}}</h5>
+            <p class="card-text" >{{emp.designation}}</p>
             <a href="#" class="btn btn-primary">Go somewhere</a>
           </div>
         </div>
       </div>
     </div>
-  </div>
+
   
