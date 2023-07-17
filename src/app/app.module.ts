@@ -5,6 +5,7 @@ import { AppComponent } from './app.component';
 import { NavbarComponent } from './navbar/navbar.component';
 import { FormComponent } from './form/form.component';
 import { RmpComponent } from './rmp/rmp.component';
+import { DataService } from './services/data.service';
 
 @NgModule({
   declarations: [
@@ -16,7 +17,7 @@ import { RmpComponent } from './rmp/rmp.component';
   imports: [
     BrowserModule
   ],
-  providers: [],
+  providers: [DataService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
