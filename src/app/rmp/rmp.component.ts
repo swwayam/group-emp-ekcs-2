@@ -1,4 +1,5 @@
 import { Component, Input } from '@angular/core';
+import { DataService } from '../services/data.service';
 
 @Component({
   selector: 'app-rmp',
@@ -6,5 +7,6 @@ import { Component, Input } from '@angular/core';
   styleUrls: ['./rmp.component.css']
 })
 export class RmpComponent {
-  @Input() db !: any[]  
+  constructor(private data : DataService){}
+  db : any = this.data.getEmp()
 }

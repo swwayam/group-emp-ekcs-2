@@ -14,7 +14,7 @@
 <!-- this displays your form to add new Employee -->
 <app-form (btnClick)="addToDb($event)" *ngIf="formDisplay"></app-form>
 
-<app-rmp [db]="arr" *ngIf="showEmployee"></app-rmp>
+<app-rmp  *ngIf="showEmployee"></app-rmp>
 
 <div class="container">
   <div class="row">
